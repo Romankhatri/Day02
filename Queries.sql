@@ -1,6 +1,7 @@
 -- SQLite
 --Day02
 
+
 --Projections
 SELECT * FROM Authors
 
@@ -37,6 +38,8 @@ ADD FOREIGN KEY (AuthorDetailId) REFERENCES AuthorDetails(Id);
 --Delete table
 DROP TABLE AuthorDetails
 
+--Homework
+
 --Create AuthorDetails table
 CREATE TABLE AuthorDetails (
     Id integer PRIMARY KEY,
@@ -45,17 +48,4 @@ CREATE TABLE AuthorDetails (
     Organization varchar(100),
     AuthorDetailsId integer,
     FOREIGN KEY (AuthorDetailsId) REFERENCES Authors(Id);
-);
-
---Delete table
-DROP TABLE AuthorDetails
-
---Create AuthorDetails table
-CREATE TABLE AuthorDetails (
-    Id integer PRIMARY KEY,
-    Education nvarchar(50),
-    Publications nvarchar(400),
-    Organization varchar(100),
-    AuthorId integer,
-    FOREIGN KEY (AuthorId) REFERENCES Authors(Id)
 );
